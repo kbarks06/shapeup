@@ -97,7 +97,8 @@ header h2{
 }
 
 #nav_list li{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #nav_list a{
@@ -128,6 +129,10 @@ aside{
     flex: 0 1 25%;
 }
 
+#thirdcol h4{
+    padding-left: .5rem;
+}
+
 p {
     margin-bottom: 12px;
 }
@@ -138,8 +143,7 @@ p, blockquote {
 }
 
 p{
-    padding: 0 1.5rem;
-
+    padding: .75rem;
 }
 
 blockquote {
@@ -149,7 +153,7 @@ blockquote {
     background-color: wheat;
 }
 
-h2, h3 {
+h2 {
     margin-bottom: 15px;
 }
 
@@ -166,18 +170,10 @@ h2, h3 {
     padding-left: 2rem;
 }
 
-section h3{
-    padding-left: 1.5rem;
-}
 
 aside h2{
-    padding-left: 1.5rem;
-    text-align: center;
+     text-align: center;
     color: maroon;
-}
-
-aside ul{
-    padding-left: 3rem;
 }
 
 aside a{
@@ -203,7 +199,9 @@ article img{
 
 section div{
     display: flex;
-
+    align-items: center;
+    margin-left: 1rem;
+    gap: .75rem;
 }
 
 section a:link, section a:visited {
@@ -235,4 +233,61 @@ footer p {
     font-size: 80%;
     font-variant: small-caps;
     color: white;
+}
+
+#mobilemenu{
+    display: none;
+}
+
+/* **************** */
+/* **Media Queries** */
+/* ***************** */
+@media only screen and (max-width: 900px){
+    body{
+        box-shadow: none;
+        font-size: 90%;
+    }
+    main{
+        flex-wrap: wrap;
+
+    }
+    #firstcol{
+        order: 3;
+        margin: 0 auto;
+    }
+
+    section{
+        flex: 0 1 75%;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+    #mobilemenu{
+        display: block;
+    }
+    #nav_menu{
+        display: none;
+    }
+    .slicknav_menu{
+        background-color: steelblue;
+    }
+    .pagetop{
+        font-size: 250%;
+    }
+    main {
+        flex-direction: column;
+    }
+
+@media only screen and (max-width: 479px){
+    header{
+        flex-direction: column;
+     .pagetop
+    }
+    .pagetop{
+        font-size: 200%;
+    }
+}
+
+
 }
